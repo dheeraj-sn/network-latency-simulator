@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"log"
 	"net/http"
 
 	"github.com/oleiade/lane"
@@ -96,5 +97,6 @@ func main() {
 	fs := http.FileServer(http.Dir("./static"))
 	http.Handle("/", fs)
 	http.HandleFunc("/dijkstra", handleDijkstra)
+	log.Println("Server started on port 8080")
 	http.ListenAndServe(":8080", nil)
 }
