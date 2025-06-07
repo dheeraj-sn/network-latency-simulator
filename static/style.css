@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Network Latency Simulator</title>
+  <script src="https://unpkg.com/cytoscape@3.24.0/dist/cytoscape.min.js"></script>
+  
+  <!-- 🎨 Style block goes here -->
+  <style>
+    #cy {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ccc;
+    }
+
+    .highlight {
+      line-color: #0074D9 !important;
+      width: 4px;
+      target-arrow-color: #0074D9;
+    }
+  </style>
+</head>
+<body>
+  <h2>Network Latency Simulator</h2>
+  <div id="cy"></div>
+  <button onclick="runDijkstra()">Run Dijkstra</button>
+  <script src="script.js"></script>
+</body>
+</html>
